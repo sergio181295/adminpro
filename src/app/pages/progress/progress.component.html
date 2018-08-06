@@ -15,26 +15,14 @@
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <div class="input-group">
-                    <div class="input-group-append" id="button-addon4">
-                        <button class="btn btn-outline-primary" type="button" (click)="cambiarPorcentaje(-5)">
-                            <i class="mdi mdi-minus"></i>
-                        </button>
-                    </div>
-                    <input type="text" class="form-control" aria-describedby="button-addon4" name="porcentaje" [(ngModel)]="porcentaje">
-                    <div class="input-group-append" id="button-addon4">
-                        <button class="btn btn-outline-primary" type="button" (click)="cambiarPorcentaje(5)">
-                            <i class="mdi mdi-plus"></i>
-                        </button>
-                    </div>
-                </div>
+                <app-incrementador></app-incrementador>
             </div>
         </div>
     </div>
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                tarjeta 2
+                <app-incrementador></app-incrementador>
             </div>
         </div>
     </div>
