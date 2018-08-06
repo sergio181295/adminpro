@@ -7,11 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressComponent implements OnInit {
 
-  porcentaje: number =  50;
+  porcentajeAzul: number =  10;
+  porcentajeVerde: number =  10;
+  nombreBarraAzul: string = 'Barra Azul';
+  nombreBarraVerde: string = 'Barra Verde';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  actualizarAzul(nuevoValor:number){
+    this.porcentajeAzul = nuevoValor;
   }
 
 }
