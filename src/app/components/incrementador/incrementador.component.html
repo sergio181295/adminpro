@@ -6,7 +6,7 @@
       <i class="mdi mdi-minus"></i>
     </button>
     </div>
-    <input type="text" class="form-control" aria-describedby="button-addon4" name="porcentaje" [(ngModel)]="porcentaje">
+    <input #inputPorcentaje type="number" class="form-control" aria-describedby="button-addon4" name="porcentaje" [(ngModel)]="porcentaje" (ngModelChange)=onChanges($event) min="0" max="100">
     <div class="input-group-append" id="button-addon4">
         <button class="btn btn-outline-primary" type="button" (click)="cambiarPorcentaje(5)">
       <i class="mdi mdi-plus"></i>
