@@ -9,6 +9,7 @@ import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficaDonaComponent } from '../components/grafica-dona/grafica-dona.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 import { PAGES_ROUTES } from './pages.routes';
 
@@ -19,7 +20,8 @@ import { PAGES_ROUTES } from './pages.routes';
         Graficas1Component,
         PagesComponent,
         IncrementadorComponent,
-        GraficaDonaComponent
+        GraficaDonaComponent,
+        AccountSettingsComponent
     ],
     exports: [
         DashboardComponent,
