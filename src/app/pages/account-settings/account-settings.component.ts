@@ -1,5 +1,5 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
+import { SettingsService } from '../../services/service.index';
 
 @Component({
   selector: 'app-account-settings',
@@ -8,14 +8,38 @@ import { DOCUMENT } from '@angular/platform-browser';
 })
 export class AccountSettingsComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) private _document) { }
+  constructor( 
+            public _settings: SettingsService) { }
 
   ngOnInit() {
+    this.iniciarCheck();
   }
 
-  cambiarTema(tema:string){
-    console.log(tema);
-    const urlTema: string = `assets/css/colors/${tema}.css`;
-    this._document.getElementById('tema').setAttribute('href', urlTema);
+  cambiarTema(tema: string, link: any){
+    this._settings.aplicarTema(tema);
+    this.aplicarCheck(link);
+  }
+
+  aplicarCheck(link: any){
+    const selectores: any = document.getElementsByClassName('selector');
+
+    for (const ref of selectores) {
+      ref.classList.remove('working');
+    }
+
+    link.classList.add('working');
+  }
+
+  iniciarCheck(){
+    const selectores: any = document.getElementsByClassName('selector');
+
+    const tema: string = this._settings.temaSettings.tema;
+
+    for (const det of selectores) {
+      if(det.getAttribute('data-theme') === tema){
+        det.classList.add('working');
+        break;
+      }
+    }
   }
 }
