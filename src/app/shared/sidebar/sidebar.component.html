@@ -26,7 +26,7 @@
                             <a routerLinkActive="active" routerLink="/account-settings">Account Setting</a>
                         </li>
                         <li>
-                            <a href="javascript:void()">Logout</a>
+                            <a routerLink="/login">Logout</a>
                         </li>
                     </ul>
                 </li>
@@ -43,15 +43,6 @@
                         <li *ngFor="let subMenu of menu.subMenu">
                             <a routerLinkActive="active" [routerLink]="[subMenu.url]">{{subMenu.titulo}} </a>
                         </li>
-                        <!-- <li>
-                            <a href="index2.html">Analytical</a>
-                        </li>
-                        <li>
-                            <a href="index3.html">Demographical</a>
-                        </li>
-                        <li>
-                            <a href="index4.html">Modern</a>
-                        </li> -->
                     </ul>
                 </li>
             </ul>
