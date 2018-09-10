@@ -8,12 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class PromesasComponent implements OnInit {
 
   constructor() {
-    
-
     this.contarSegundos().then(
-      () => console.log(12345)
+      () => console.log('Fin Pormesa!')
     ).catch(
-      error => console.error(54321)
+      error => console.error('Error Promesa...')
     );
   }
 

@@ -16,7 +16,7 @@ export class IncrementadorComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.porcentaje);
+    //console.log(this.porcentaje);
   }
 
   cambiarPorcentaje(valor: number) {

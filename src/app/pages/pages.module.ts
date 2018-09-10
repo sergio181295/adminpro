@@ -13,6 +13,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 
 import { PAGES_ROUTES } from './pages.routes';
 import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { PromesasComponent } from './promesas/promesas.component';
         IncrementadorComponent,
         GraficaDonaComponent,
         AccountSettingsComponent,
-        PromesasComponent
+        PromesasComponent,
+        RxjsComponent
     ],
     exports: [
         DashboardComponent,
